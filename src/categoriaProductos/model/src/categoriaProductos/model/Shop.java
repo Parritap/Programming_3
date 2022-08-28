@@ -1,6 +1,6 @@
-package categoriaProductos.model;
+package categoriaProductos.model.src.categoriaProductos.model;
 
-import categoriaProductos.implementations.ICategorizableShop;
+import categoriaProductos.model.src.categoriaProductos.implementations.ICategorizableShop;
 
 import java.util.ArrayList;
 

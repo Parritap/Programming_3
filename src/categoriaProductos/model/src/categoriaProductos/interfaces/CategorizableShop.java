@@ -1,9 +1,9 @@
-package categoriaProductos.interfaces;
+package categoriaProductos.model.src.categoriaProductos.interfaces;
 
 
 import java.util.ArrayList;
 
-public interface Categorizable<Product, Color, Category>  {
+public interface CategorizableShop<Product, Color, Category>  {
 
     /**
      * Returns an array of productos that fullfill that their price is greater than a certain number.

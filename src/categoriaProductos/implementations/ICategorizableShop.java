@@ -1,17 +1,17 @@
 package categoriaProductos.implementations;
 
-import categoriaProductos.interfaces.Categorizable;
+import categoriaProductos.interfaces.CategorizableShop;
 import categoriaProductos.model.Category;
 import categoriaProductos.model.Color;
 import categoriaProductos.model.Product;
 
 import java.util.ArrayList;
 
-public class ICategorizable implements Categorizable<Product, Color, Category> {
+public class ICategorizableShop implements CategorizableShop<Product, Color, Category> {
 
     private ArrayList<Category> categories;
 
-    public ICategorizable(ArrayList<Category> categories) {
+    public ICategorizableShop(ArrayList<Category> categories) {
         this.categories = categories;
     }
 

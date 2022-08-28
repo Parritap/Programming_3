@@ -1,9 +1,9 @@
-package categoriaProductos.application;
+package categoriaProductos.model.src.categoriaProductos.application;
 
-import categoriaProductos.model.Color;
-import categoriaProductos.model.Product;
-import categoriaProductos.model.Shop;
-import categoriaProductos.utils.ObjectsCreator;
+import categoriaProductos.model.src.categoriaProductos.model.Color;
+import categoriaProductos.model.src.categoriaProductos.model.Product;
+import categoriaProductos.model.src.categoriaProductos.model.Shop;
+import categoriaProductos.model.src.categoriaProductos.utils.ObjectsCreator;
 
 import java.util.ArrayList;
 
