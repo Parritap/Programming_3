@@ -15,6 +15,8 @@ public class Shop {
     public Shop() {
     }
 
+
+
     public ArrayList<Category> getCategories() {
         return categories;
     }

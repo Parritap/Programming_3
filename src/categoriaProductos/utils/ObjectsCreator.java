@@ -9,11 +9,9 @@ import categoriaProductos.model.Shop;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class ObjectsCreation {
+public class ObjectsCreator {
 
-    Shop shop;
-
-    public void instatiateObjects() {
+    static public ArrayList<Category> returnGenericObjects() {
 
         //Declaration of the mother categories.
         Category kitchen = new Category("kitchen");
@@ -37,8 +35,6 @@ public class ObjectsCreation {
         pot.getProducts().addAll(Arrays.asList(imusaPot, pressureCooker));
 
         kitchen.getCategories().addAll(Arrays.asList(food, pot));
-
-
 
 
         //---------------------------------------------------------------------------------------------
@@ -93,15 +89,10 @@ public class ObjectsCreation {
         ios.getProducts().add(iphone);
         android.getProducts().add(samsumg);
         mobile.getCategories().addAll(Arrays.asList(ios, android));
-
         tech.getCategories().addAll(Arrays.asList(pc, mobile));
 
-
+        return new ArrayList<Category>(Arrays.asList(tech, kitchen));
 
         ////////////////////////////////////////////////////
-
-        this.shop.get
     }
-
-
 }

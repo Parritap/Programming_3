@@ -18,8 +18,6 @@ public class ICategorizable implements Categorizable<Product, Color, Category> {
     @Override
     public ArrayList<Product> findProductsWithPrice(double price, ArrayList<Category> categories, ArrayList<Product> savedItems) {
 
-        ArrayList<Product> array = savedItems;
-
         if (categories != null && categories.size() > 0) {
 
             for (Category c : categories) {
@@ -30,14 +28,32 @@ public class ICategorizable implements Categorizable<Product, Color, Category> {
                             savedItems.add(p);
                     }
                 }
-                findProductsWithPrice(price, c.getCategories(), array);
+                findProductsWithPrice(price, c.getCategories(), savedItems);
             }
         }
-        return array;
+        return savedItems;
     }
 
     @Override
-    public ArrayList<Product> findProductoWithColor(Color color) {
-        return null;
+    public ArrayList<Product> findProductsWithColor(Color color, ArrayList<Category> categories, ArrayList<Product> savedItems) {
+
+
+        if (categories != null && categories.size() > 0) {
+
+            for (Category c : categories) {
+
+                if (c.getProducts() != null) {
+                    for (Product p : c.getProducts()) {
+                        if (p != null && p.getColor() == color)
+                            savedItems.add(p);
+                    }
+                }
+                findProductsWithColor(color, c.getCategories(), savedItems);
+            }
+        }
+        return savedItems;
+
     }
+
+
 }

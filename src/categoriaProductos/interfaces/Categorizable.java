@@ -1,9 +1,6 @@
 package categoriaProductos.interfaces;
 
 
-import categoriaProductos.model.Category;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public interface Categorizable<Product, Color, Category>  {
@@ -15,7 +12,7 @@ public interface Categorizable<Product, Color, Category>  {
      */
     ArrayList<Product> findProductsWithPrice (double price, ArrayList<Category> categories, ArrayList<Product> savedItems);
 
-    ArrayList<Product> findProductoWithColor (Color color);
+    ArrayList<Product> findProductsWithColor(Color color, ArrayList<Category> categories, ArrayList<Product> savedItems);
 
 
 
