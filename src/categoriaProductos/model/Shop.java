@@ -5,20 +5,25 @@ import categoriaProductos.implementations.ICategorizable;
 import java.util.ArrayList;
 
 public class Shop {
-
-    private ArrayList<Product> products;
     private ArrayList<Category> categories;
-    private final ICategorizable i_categorizable= new ICategorizable(categories);
+    private final ICategorizable i_categorizable = new ICategorizable(categories);
 
-    public Shop(ArrayList<Product> products) {
-        this.products = products;
+    public Shop(ArrayList<Category> categories) {
+        this.categories = categories;
     }
 
-    public ArrayList<Product> getProducts() {
-        return products;
+    public Shop() {
     }
 
-    public void setProducts(ArrayList<Product> products) {
-        this.products = products;
+    public ArrayList<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(ArrayList<Category> categories) {
+        this.categories = categories;
+    }
+
+    public ICategorizable getI_categorizable() {
+        return i_categorizable;
     }
 }

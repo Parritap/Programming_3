@@ -5,9 +5,24 @@ import java.util.ArrayList;
 
 public class Category {
 
-   private String name;
-   private ArrayList<Category> categories;
-   private ArrayList<Product> products;
+    private String name;
+    private ArrayList<Category> categories;
+    private ArrayList<Product> products;
+
+    public Category(String name, ArrayList<Category> categories, ArrayList<Product> products) {
+        this.name = name;
+        this.categories = categories;
+        this.products = products;
+    }
+
+    public Category() {
+    }
+
+    public Category(String name) {
+        this.name = name;
+        this.categories = new ArrayList<>();
+        this.products = new ArrayList<>();
+    }
 
     public String getName() {
         return name;

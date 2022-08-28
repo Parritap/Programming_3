@@ -10,6 +10,9 @@ public class ICategoryGenerator implements ObjectGenerator<Category> {
 
     @Override
     public ArrayList<Category> generateObjects(int numOfObjects) {
+
+
+
         return null;
     }
 }
