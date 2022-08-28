@@ -1,20 +1,24 @@
 package categoriaProductos.model;
 
+import categoriaProductos.implementations.ICategorizable;
+
 import java.util.ArrayList;
 
 public class Shop {
 
-    private ArrayList listOfProductos;
+    private ArrayList<Product> products;
+    private ArrayList<Category> categories;
+    private final ICategorizable i_categorizable= new ICategorizable(categories);
 
-    public Shop(ArrayList listOfProductos) {
-        this.listOfProductos = listOfProductos;
+    public Shop(ArrayList<Product> products) {
+        this.products = products;
     }
 
-    public ArrayList getListOfProductos() {
-        return listOfProductos;
+    public ArrayList<Product> getProducts() {
+        return products;
     }
 
-    public void setListOfProductos(ArrayList listOfProductos) {
-        this.listOfProductos = listOfProductos;
+    public void setProducts(ArrayList<Product> products) {
+        this.products = products;
     }
 }
