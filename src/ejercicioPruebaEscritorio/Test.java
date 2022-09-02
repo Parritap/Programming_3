@@ -9,7 +9,7 @@ public class Test {
 
         Vector v = new Vector(new int[] {1,2,3});
 
-        System.out.println(v.getSumOfSquaredComponents(0,0));
+      //  System.out.println(v.getSumOfSquaredComponents(0,0));
         System.out.println(v.getModule());
     }
 

@@ -15,10 +15,9 @@ public class Vector implements Vectorizable{
     }
 
     public double getSumOfSquaredComponents (double sum, int i){
-        if(i<components.length){
+        if(i<components.length){ // {1,2,3}  i=0
             return getSumOfSquaredComponents(sum + Math.pow(components[i], 2), ++i);
         }
         return sum;
     }
-
 }
