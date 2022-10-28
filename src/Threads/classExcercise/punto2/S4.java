@@ -5,6 +5,9 @@ public class S4 extends Thread{
     public int number1;
     public int number2;
 
+    public S4() {
+    }
+
     public S4(int number1, int number2) {
         this.number1 = number1;
         this.number2 = number2;
