@@ -1,10 +1,10 @@
 package Threads;
 
-public class Multithreading_thing extends Thread{
+public class ClaseHilo extends Thread{
 
     private int threadNumber;
 
-    public Multithreading_thing(int threadNumber) {
+    public ClaseHilo(int threadNumber) {
         this.threadNumber = threadNumber;
     }
 
