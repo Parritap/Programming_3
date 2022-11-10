@@ -8,7 +8,7 @@ public class Valvula {
 
 
     public Valvula (){
-        this.piston = piston;
+
     }
 
 
