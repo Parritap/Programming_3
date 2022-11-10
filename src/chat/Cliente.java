@@ -3,6 +3,7 @@ package chat;
 import java.net.*;
 import java.io.*;
 import java.util.Scanner;
+
 public class Cliente {
     private Socket socket;
     private DataInputStream bufferDeEntrada = null;
@@ -39,7 +40,7 @@ public class Cliente {
             bufferDeSalida.writeUTF(s);
             bufferDeSalida.flush();
         } catch (IOException e) {
-            print("IOException on enviar");
+            print("IOException al enviar el mensaje");
         }
     }
 
@@ -51,7 +52,7 @@ public class Cliente {
             print("Conexión terminada");
         } catch (IOException e) {
             print("IOException on cerrarConexion()");
-        }finally{
+        } finally {
             System.exit(0);
         }
     }
@@ -80,7 +81,8 @@ public class Cliente {
                 print("\n[Servidor] => " + st);
                 System.out.print("\n[Usted] => ");
             } while (!st.equals(COMANDO_TERMINACION));
-        } catch (IOException e) {}
+        } catch (IOException e) {
+        }
     }
 
     public void escribirDatos() {
@@ -88,7 +90,7 @@ public class Cliente {
         while (true) {
             System.out.print("[Usted] => ");
             entrada = teclado.nextLine();
-            if(entrada.length() > 0)
+            if (entrada.length() > 0)
                 enviar(entrada);
         }
     }
@@ -106,4 +108,14 @@ public class Cliente {
         cliente.ejecutarConexion(ip, Integer.parseInt(puerto));
         cliente.escribirDatos();
     }
+
+
+    /**
+     *Notas
+     *
+     * FLUSH();
+     * When you write data to a stream, it is not written immediately, and it is buffered. So use flush() when you need to be sure that all your data from buffer is written.
+     * We need to be sure that all the writes are completed before we close the stream, and that is why flush() is called in file/buffered writer's close().
+     * But if you have a requirement that all your writes be saved anytime before you close the stream, use flush().
+     */
 }
