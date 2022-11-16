@@ -13,7 +13,7 @@ public class FilesManipulation {
             if  (myFile.createNewFile()){
                 System.out.println("File was crated");
             }else{
-                System.out.println("Fila was NOT created");
+                System.out.println("File was NOT created");
             }
         } catch (IOException e) {
             System.out.println("An error occurred");
